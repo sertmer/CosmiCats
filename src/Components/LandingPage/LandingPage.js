@@ -3,7 +3,7 @@ import './LandingPage.scss';
 import { Link } from 'react-router-dom';
 
 
-const LandingPage = () => {
+export const LandingPage = () => {
   return (
     <section>
       <h2>The Truth has Nine Lives</h2>

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Login unit tests should match the snapshot 1`] = `
+<section
+  className="mission-card"
+>
+  <article
+    className="belief-card card"
+  >
+    <h2>
+      Our Belief
+    </h2>
+    <p>
+      Cats are Aliens
+    </p>
+  </article>
+  <form
+    className="binding-contract card"
+  >
+    <label
+      htmlFor="name"
+    >
+      Name: 
+    </label>
+    <input
+      className="user-name"
+      name="name"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <div>
+      <input
+        className="agree-radio"
+        name="agree"
+        type="radio"
+      />
+      <label
+        htmlFor="agree"
+      >
+        I Agree
+      </label>
+    </div>
+    <Link
+      to="/research"
+    >
+      <button
+        type="button"
+      >
+        Start Research
+      </button>
+    </Link>
+  </form>
+</section>
+`;

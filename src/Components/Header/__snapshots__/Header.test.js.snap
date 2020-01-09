@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Header unit tests should match the snapshot 1`] = `
+<header>
+  <h1
+    className="cccr-header"
+  >
+    The Center for CosmiCat Research
+  </h1>
+  <div
+    className="icon-div"
+  >
+    <img
+      alt="small green alien icon"
+      className="icon"
+      src="alien.svg"
+    />
+    <p
+      className="triple-equals"
+    >
+      ===
+    </p>
+    <img
+      alt="small green cat icon"
+      className="icon"
+      src="cat.svg"
+    />
+  </div>
+</header>
+`;

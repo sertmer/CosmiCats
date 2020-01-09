@@ -6,7 +6,7 @@ import ResearchContainer from '../ResearchContainer/ResearchContainer';
 import './App.scss';
 import { Route } from 'react-router-dom';
 
-function App() {
+export const App = () => {
   return (
     <main>
       <Route path='/' render={ () => 
