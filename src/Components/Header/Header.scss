@@ -5,28 +5,25 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 1%;
 }
 
 .icon {
   height: 5vh;
 }
 
-h1 {
+.cccr-header {
   color: white;
   font-family: 'Audiowide', cursive;
+  margin: 0;
 }
 
-p {
+.triple-equals {
   font-size: x-large;
   font-family: 'Audiowide', cursive;
-  margin: 12px 10px;
-  margin-left: 5px;
   color: white;
 }
 
 .icon-div {
   display: flex;
   flex-direction: row;
-  margin: 1%;
 }

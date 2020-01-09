@@ -6,7 +6,8 @@ class Login extends Component {
     super()
 
     this.state = {
-      name: ''
+      name: '',
+      hasAgreed: false
     }
   }
 
@@ -16,14 +17,24 @@ class Login extends Component {
 
   render() {
     return (
-      <form>
-        <input 
-          type='text' 
-          name='name' 
-          value='this.state.name' 
-          onClick={ (e) => this.handleChange(e) }
-        />
-      </form>
+      <section>
+        <article>
+          <h2>Our Belief</h2>
+          <p>Cats are Aliens</p>
+        </article>
+          <form>
+            <input type='radio' name='agree'></input>
+            <label htmlFor='agree'>I Agree</label>
+            <label htmlFor='name'>Name: </label>
+            <input 
+              type='text' 
+              name='name' 
+              value={this.state.name}
+              onChange={ (e) => this.handleChange(e) }
+            />
+            <button type='button'>Start Research</button>
+          </form>
+        </section>
     )
   }
 }

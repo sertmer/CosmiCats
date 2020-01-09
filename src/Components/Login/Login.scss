@@ -1,0 +1,7 @@
+@import '../../_scss/variables';
+@import '../../_scss/mixins';
+
+section {
+  display: flex;
+  flex-direction: column;
+}
