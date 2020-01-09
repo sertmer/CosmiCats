@@ -8,7 +8,7 @@ export const Header = ({user}) => {
   return (
     <header>
       <h1 className='cccr-header'>The Center for CosmiCat Research</h1>
-      <h1>Welcome Dr.{user}</h1>
+      { user && <h1>Welcome Dr.{user}</h1>}
       <div className='icon-div'>
         <img className="icon" src={alien} alt='small green alien icon' />
         <p className='triple-equals'>===</p>
