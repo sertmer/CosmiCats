@@ -1,7 +1,8 @@
 import React from 'react';
-import LandingPage from '../LandingPage/LandingPage';
 import Header from '../Header/Header';
+import LandingPage from '../LandingPage/LandingPage';
 import Login from '../Login/Login';
+import ResearchContainer from '../ResearchContainer/ResearchContainer';
 import './App.scss';
 import { Route } from 'react-router-dom';
 
@@ -18,6 +19,10 @@ function App() {
       />
       <Route path='/login' render={() =>
           <Login />
+        }
+      />
+      <Route exact path='/research' render={() => 
+          <ResearchContainer />
         }
       />
     </main>

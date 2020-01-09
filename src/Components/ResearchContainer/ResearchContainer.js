@@ -5,6 +5,7 @@ import Research from '../Research/Research'
 export const ResearchContainer = () => {
   return(
     <section>
+      <Research />
       <article>
         <h2>nasa id</h2>
         <p>nas123</p>

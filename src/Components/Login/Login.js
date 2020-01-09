@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Login.scss';
+import { Link } from 'react-router-dom';
 
 class Login extends Component {
   constructor() {
@@ -32,7 +33,9 @@ class Login extends Component {
               value={this.state.name}
               onChange={ (e) => this.handleChange(e) }
             />
-            <button type='button'>Start Research</button>
+            <Link to={'/research'}>
+              <button type='button'>Start Research</button>
+            </Link>
           </form>
         </section>
     )
