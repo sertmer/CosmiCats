@@ -67,20 +67,20 @@ describe('Login', () => {
         expect(wrapper.instance().handleClick).toHaveBeenCalledWith(mockAgreeEvent)
       })
     })
+  })
+  
+  describe('mapDispatchToProps', () => {
+    let mockDispatch, mockActionToDispatch
 
-    describe('mapDispatchToProps', () => {
-      let mockDispatch, mockActionToDispatch
+    beforeEach(() => {
+      mockDispatch = jest.fn()
+    })
+    it('should call mapDispatchToProps with a user', () => {
+      mockActionToDispatch = setUser('Davey Havok')
+      const mappedProps = mapDispatchToProps(mockDispatch)
 
-      beforeEach(() => {
-        mockDispatch = jest.fn()
-      })
-      it('should call mapDispatchToProps with a user', () => {
-        mockActionToDispatch = setUser('Davey Havok')
-        const mappedProps = mapDispatchToProps(mockDispatch)
-
-        mappedProps.setUser('Davey Havok')
-        expect(mockDispatch).toHaveBeenCalledWith(mockActionToDispatch)
-      })
+      mappedProps.setUser('Davey Havok')
+      expect(mockDispatch).toHaveBeenCalledWith(mockActionToDispatch)
     })
   })
 })

@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Header, mapStateToProps } from './Header';
+import { Header, mapStateToProps, mapDispatchToProps } from './Header';
+import { setUser } from '../../actions'
 
 describe('Header', () => {
 
@@ -14,18 +15,33 @@ describe('Header', () => {
     it.skip('should match the snapshot', () => {
       expect(wrapper).toMatchSnapshot()
     })
-    
-    describe('mapStateToProps', () => {
-      it('should return the users name', () => {
-        const mockState = {
-          user: 'Davey Havok',
-          extra: 'extra'
-        }
-        const expected = { user: 'Davey Havok'}
-        const mappedProps = mapStateToProps(mockState)
+  })
 
-        expect(mappedProps).toEqual(expected)
-      })
+  describe('mapStateToProps', () => {
+    it('should return the users name', () => {
+      const mockState = {
+        user: 'Davey Havok',
+        extra: 'extra'
+      }
+      const expected = { user: 'Davey Havok'}
+      const mappedProps = mapStateToProps(mockState)
+
+      expect(mappedProps).toEqual(expected)
+    })
+  })
+  
+  describe('mapDispatchToProps', () => {
+    let mockDispatch, mockActionToDispatch
+
+    beforeEach(() => {
+      mockDispatch = jest.fn()
+    })
+    it('should call mapDispatchToProps with a user', () => {
+      mockActionToDispatch = setUser('Davey Havok')
+      const mappedProps = mapDispatchToProps(mockDispatch)
+
+      mappedProps.setUser('Davey Havok')
+      expect(mockDispatch).toHaveBeenCalledWith(mockActionToDispatch)
     })
   })
 })
