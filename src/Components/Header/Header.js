@@ -1,7 +1,7 @@
 import React from 'react';
-import './Nav.scss'
+import './Header.scss'
 
-const Nav = () => {
+const Header = () => {
   return (
     <header>
       <h1>The Center for CosmiCat Research</h1>
@@ -9,4 +9,4 @@ const Nav = () => {
   )
 }
 
-export default Nav;
+export default Header;

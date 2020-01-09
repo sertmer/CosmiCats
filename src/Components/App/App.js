@@ -1,13 +1,13 @@
 import React from 'react';
-import LandingForm from '../LandingForm/LandingForm';
-import Nav from '../Nav/Nav'
+import LandingPage from '../LandingPage/LandingPage';
+import Header from '../Header/Header';
 import './App.scss';
 
 function App() {
   return (
     <body>
-      <Nav /> 
-      <LandingForm />
+      <Header /> 
+      <LandingPage />
     </body>
   );
 }

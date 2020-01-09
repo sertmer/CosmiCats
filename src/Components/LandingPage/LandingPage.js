@@ -1,7 +1,8 @@
 import React from 'react';
-import './LandingForm.scss';
+import './LandingPage.scss';
 
-const LandingForm = () => {
+
+const LandingPage = () => {
   return (
     <main>
       <h2>The Truth has Nine Lives</h2>
@@ -10,4 +11,4 @@ const LandingForm = () => {
   )
 }
 
-export default LandingForm;
+export default LandingPage;
