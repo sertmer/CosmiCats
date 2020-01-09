@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './Login.scss';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setUser } from '../../actions'
 
 export class Login extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
       name: '',
@@ -21,6 +23,7 @@ export class Login extends Component {
   }
 
   render() {
+    const { setUser } = this.props
     const { name, hasAgreed } = this.state
     return (
       <section className='mission-card'>
@@ -48,7 +51,7 @@ export class Login extends Component {
             </div>
             { name && hasAgreed ? 
               <Link to={'/research'}>
-                <button type='button'>Start Research</button>
+                <button type='button' onClick={() => setUser(name)}>Start Research</button>
               </Link> 
               :
               <p>Complete the form to proceed</p>
@@ -59,4 +62,8 @@ export class Login extends Component {
   }
 }
 
-export default Login;
+export const mapDispatchToProps = dispatch => ({
+  setUser: user => dispatch(setUser(user))
+})
+
+export default connect(null, mapDispatchToProps)(Login);
