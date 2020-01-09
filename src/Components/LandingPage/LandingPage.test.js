@@ -10,8 +10,8 @@ describe('LandingPage', () => {
     wrapper = shallow(<LandingPage />)
   })
 
-  describe('LandingPage unit tests', () => {
-    it('should match the snapshot', () => {
+  describe('Unit Tests', () => {
+    it.skip('should match the snapshot', () => {
       expect(wrapper).toMatchSnapshot()
     })
   })

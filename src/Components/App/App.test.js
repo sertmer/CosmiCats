@@ -11,7 +11,7 @@ describe('App', () => {
   })
 
   describe('App unit tests', () => {
-    it('should match the snapshot', () => {
+    it.skip('should match the snapshot', () => {
       expect(wrapper).toMatchSnapshot()
     })
   })

@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../Header/Header';
+import Header from '../../Containers/Header/Header';
 import LandingPage from '../LandingPage/LandingPage';
-import Login from '../Login/Login';
+import Login from '../../Containers/Login/Login';
 import ResearchContainer from '../ResearchContainer/ResearchContainer';
 import './App.scss';
 import { Route } from 'react-router-dom';
