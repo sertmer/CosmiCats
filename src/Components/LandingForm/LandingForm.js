@@ -1,4 +1,5 @@
 import React from 'react';
+import './LandingForm.scss';
 
 const LandingForm = () => {
   return (
@@ -9,4 +10,4 @@ const LandingForm = () => {
   )
 }
 
-export default LandingForm
+export default LandingForm;
