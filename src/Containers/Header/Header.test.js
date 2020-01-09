@@ -36,11 +36,12 @@ describe('Header', () => {
     beforeEach(() => {
       mockDispatch = jest.fn()
     })
-    it('should call mapDispatchToProps with a user', () => {
-      mockActionToDispatch = setUser('Davey Havok')
+
+    it('should call mapDispatchToProps with an empty string user', () => {
+      mockActionToDispatch = setUser('')
       const mappedProps = mapDispatchToProps(mockDispatch)
 
-      mappedProps.setUser('Davey Havok')
+      mappedProps.setUser('')
       expect(mockDispatch).toHaveBeenCalledWith(mockActionToDispatch)
     })
   })
