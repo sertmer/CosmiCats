@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Login } from './Login';
+import { Login, mapDispatchToProps } from './Login';
+import { setUser } from '../../actions'
 
 describe('Login', () => {
 
@@ -64,6 +65,21 @@ describe('Login', () => {
         wrapper.find('.agree-radio').simulate('click', mockAgreeEvent)
 
         expect(wrapper.instance().handleClick).toHaveBeenCalledWith(mockAgreeEvent)
+      })
+    })
+
+    describe('mapDispatchToProps', () => {
+      let mockDispatch, mockActionToDispatch
+
+      beforeEach(() => {
+        mockDispatch = jest.fn()
+      })
+      it('should call mapDispatchToProps with a user', () => {
+        mockActionToDispatch = setUser('Davey Havok')
+        const mappedProps = mapDispatchToProps(mockDispatch)
+
+        mappedProps.setUser('Davey Havok')
+        expect(mockDispatch).toHaveBeenCalledWith(mockActionToDispatch)
       })
     })
   })
