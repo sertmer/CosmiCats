@@ -1,12 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './Header.scss';
 import alien from '../../images/alien.svg';
 import cat from '../../images/cat.svg';
 
-export const Header = () => {
+export const Header = ({user}) => {
   return (
     <header>
       <h1 className='cccr-header'>The Center for CosmiCat Research</h1>
+      <h1>Welcome Dr.{user}</h1>
       <div className='icon-div'>
         <img className="icon" src={alien} alt='small green alien icon' />
         <p className='triple-equals'>===</p>
@@ -16,4 +18,8 @@ export const Header = () => {
   )
 }
 
-export default Header;
+export const mapStateToProps = state => ({
+  user: state.user
+})
+
+export default connect(mapStateToProps)(Header);
