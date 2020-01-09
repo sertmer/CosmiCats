@@ -10,8 +10,9 @@ export const Header = ({user, setUser}) => {
   return (
     <header>
       <h1 className='cccr-header'>The Center for CosmiCat Research</h1>
-      { user && <div>
-          <h2>Welcome Dr.{user}</h2>
+      { user && 
+        <div>
+          <h2>Welcome Dr. {user}</h2>
           <Link to='/'>
             <button onClick={() => setUser('')}>Sign Out</button>
           </Link>
