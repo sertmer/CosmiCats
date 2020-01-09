@@ -3,7 +3,7 @@ import './Header.scss';
 import alien from '../../images/alien.svg';
 import cat from '../../images/cat.svg';
 
-const Header = () => {
+export const Header = () => {
   return (
     <header>
       <h1 className='cccr-header'>The Center for CosmiCat Research</h1>
