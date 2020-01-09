@@ -18,21 +18,24 @@ class Login extends Component {
 
   render() {
     return (
-      <section>
-        <article>
-          <h2>Our Belief</h2>
+      <section className='mission-card'>
+        <article className='belief-card card'>
+          <h2 >Our Belief</h2>
           <p>Cats are Aliens</p>
         </article>
-          <form>
-            <input type='radio' name='agree'></input>
-            <label htmlFor='agree'>I Agree</label>
+          <form className='binding-contract card'>
             <label htmlFor='name'>Name: </label>
             <input 
-              type='text' 
+              type='text'
+              className='user-name' 
               name='name' 
               value={this.state.name}
               onChange={ (e) => this.handleChange(e) }
             />
+            <div>
+              <input className='agree-radio' type='radio' name='agree'></input>
+              <label htmlFor='agree'>I Agree</label>
+            </div>
             <Link to={'/research'}>
               <button type='button'>Start Research</button>
             </Link>
