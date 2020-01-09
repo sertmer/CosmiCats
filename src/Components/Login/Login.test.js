@@ -44,6 +44,14 @@ describe('Login', () => {
     })
 
     describe('handleClick', () => {
+      it('should call setState when handleClick is invoked', () => {
+        const expected = { hasAgreed: true }
+        wrapper.instance().setState = jest.fn()
+        wrapper.instance().handleClick(mockAgreeEvent)
+
+        expect(wrapper.instance().setState).toHaveBeenCalledWith(expected)
+      })
+
       it('should set state with true when handleClick is invoked', () => {
         const expected = { name: '', hasAgreed: true }
         wrapper.instance().handleClick(mockAgreeEvent)
