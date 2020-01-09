@@ -1,12 +1,20 @@
 import React from 'react';
 import './LandingPage.scss';
+import { Link } from 'react-router-dom';
 
 
 const LandingPage = () => {
   return (
     <section>
       <h2>The Truth has Nine Lives</h2>
-      <button type='button' className='Login-button'>Join Us</button>
+      <Link to={'/login'}>
+        <button 
+          type='button' 
+          className='Login-button'
+        >
+          Join Us
+        </button>
+      </Link>
     </section>
   )
 }
