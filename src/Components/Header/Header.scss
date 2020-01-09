@@ -1,0 +1,17 @@
+@import '../../_scss/variables';
+@import '../../_scss/mixins';
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icon {
+  height: 5vh;
+}
+
+h1 {
+  color: white;
+  font-family: 'Audiowide', cursive;;
+}

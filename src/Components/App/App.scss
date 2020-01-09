@@ -1,0 +1,9 @@
+@import '../../_scss/mixins';
+@import '../../_scss/variables';
+
+main {
+  background-color: $dark-blue;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

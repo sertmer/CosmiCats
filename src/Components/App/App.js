@@ -5,10 +5,10 @@ import './App.scss';
 
 function App() {
   return (
-    <body>
+    <main>
       <Header /> 
       <LandingPage />
-    </body>
+    </main>
   );
 }
 

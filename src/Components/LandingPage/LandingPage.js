@@ -4,10 +4,10 @@ import './LandingPage.scss';
 
 const LandingPage = () => {
   return (
-    <main>
+    <section>
       <h2>The Truth has Nine Lives</h2>
       <button type='button' className='Login-button'>Join Us</button>
-    </main>
+    </section>
   )
 }
 
