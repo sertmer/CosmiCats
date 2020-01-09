@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Login.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setUser } from '../../actions'
+import { setUser } from '../../actions';
 
 export class Login extends Component {
   constructor(props) {
