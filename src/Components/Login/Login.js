@@ -21,6 +21,7 @@ export class Login extends Component {
   }
 
   render() {
+    const { name, hasAgreed } = this.state
     return (
       <section className='mission-card'>
         <article className='belief-card card'>
@@ -45,9 +46,13 @@ export class Login extends Component {
               />
               <label htmlFor='hasAgreed'>I Agree</label>
             </div>
-            <Link to={'/research'}>
-              <button type='button'>Start Research</button>
-            </Link>
+            { name && hasAgreed ? 
+              <Link to={'/research'}>
+                <button type='button'>Start Research</button>
+              </Link> 
+              :
+              <p>Complete the form to proceed</p>
+            }
           </form>
         </section>
     )
