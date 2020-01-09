@@ -16,6 +16,10 @@ export class Login extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+  handleClick = (e) => {
+    this.setState({[e.target.name]: true})
+  }
+
   render() {
     return (
       <section className='mission-card'>
@@ -30,11 +34,16 @@ export class Login extends Component {
               className='user-name' 
               name='name' 
               value={this.state.name}
-              onChange={ (e) => this.handleChange(e) }
+              onChange={(e) => this.handleChange(e)}
             />
             <div>
-              <input className='agree-radio' type='radio' name='agree'></input>
-              <label htmlFor='agree'>I Agree</label>
+              <input 
+                className='agree-radio' 
+                type='radio' 
+                name='hasAgreed' 
+                onClick={(e) => this.handleClick(e)}
+              />
+              <label htmlFor='hasAgreed'>I Agree</label>
             </div>
             <Link to={'/research'}>
               <button type='button'>Start Research</button>
