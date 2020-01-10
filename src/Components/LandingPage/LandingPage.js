@@ -9,7 +9,9 @@ export class LandingPage extends Component {
   
   componentDidMount() {
     getNasaImages()
-      .then(data => console.log(this.cleanData(data)))
+      .then(data => this.cleanData(data))
+      .then(data => this.props.setNasaImages(data))
+  
   }
 
   cleanData = (data) => {
