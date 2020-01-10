@@ -12,7 +12,13 @@ describe('Header', () => {
   })
 
   describe('Header unit tests', () => {
+
     it.skip('should match the snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    })
+
+    it.skip('should match the snapshot when there is a user in props', () => {
+      wrapper = shallow(<Header user={'Davey Havok'} />)
       expect(wrapper).toMatchSnapshot()
     })
   })
