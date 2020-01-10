@@ -9,8 +9,18 @@ export class LandingPage extends Component {
   
   componentDidMount() {
     getNasaImages()
-      .then(data => console.log(data))
+      .then(data => console.log(this.cleanData(data)))
+  }
 
+  cleanData = (data) => {
+    let cleanedImage
+    return data.collection.items.map(item => {
+      return cleanedImage = {
+        img: item.links[0].href,
+        id: item.data[0].nasa_id,
+        dateCreated: item.data[0].date_created
+      }
+    })
   }
 
   render() {
