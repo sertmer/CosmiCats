@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Login, mapDispatchToProps } from './Login';
 import { setUser } from '../../actions'
+import { LandingPage } from '../LandingPage/LandingPage';
 
 describe('Login', () => {
 
@@ -72,6 +73,22 @@ describe('Login', () => {
         wrapper.find('.agree-radio').simulate('click', mockAgreeEvent)
 
         expect(wrapper.instance().handleClick).toHaveBeenCalledWith(mockAgreeEvent)
+      })
+    })
+
+    describe('setUser on click', () => {
+      it.skip('should invoke setUser on click', () => {
+        const mockSetUser = jest.fn()
+        const mockState = { name: 'Davey Havok', hasAgreed: true }
+        wrapper = shallow(<LandingPage setUser={mockSetUser} />)
+
+        wrapper.instance().setState(mockState)
+
+        expect(wrapper.state()).toEqual(mockState)
+
+        wrapper.find('button').simulate('click', wrapper.state('name'))
+
+        expect(mockSetUser).toHaveBeenCalledWith('Davey Havok')
       })
     })
   })
