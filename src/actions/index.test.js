@@ -2,7 +2,7 @@ import * as actions from './index'
 
 describe('actions', () => {
 
-  describe('SET_USER', () => {
+  describe('setUser', () => {
     it('should have a type of SET_USER', () => {
       const user = 'Davey Havok'
       const result = actions.setUser(user)
@@ -15,7 +15,7 @@ describe('actions', () => {
     })
   })
 
-  describe('SET_NASA_IMAGES', () => {
+  describe('setNasaImages', () => {
     it('should have a type of SET_NASA_IMAGES', () => {
       const mockImages = [
         {
@@ -30,7 +30,7 @@ describe('actions', () => {
         }
       ]
 
-      const mockExpectedAction = {
+      const expected = {
         type: 'SET_NASA_IMAGES',
         images: [
           {
@@ -48,7 +48,56 @@ describe('actions', () => {
 
       const result = actions.setNasaImages(mockImages)
       
-      expect(result).toEqual(mockExpectedAction)
+      expect(result).toEqual(expected)
+    })
+  })
+
+  describe('setCatImages', () => {
+    it('should have a type of SET_CAT_IMAGES', () => {
+      const mockImages = [
+        {
+          breeds: [],
+          categories: [],
+          id: '58',
+          url: 'url.com',
+          width: 500,
+          height: 500
+        },
+        {
+          breeds: [],
+          categories: [],
+          id: '78',
+          url: 'url2.com',
+          width: 400,
+          height: 400
+        }
+      ]
+      
+      const result = actions.setCatImages(mockImages)
+
+      const expected = {
+        type: 'SET_CAT_IMAGES',
+        images: [
+          {
+            breeds: [],
+            categories: [],
+            id: '58',
+            url: 'url.com',
+            width: 500,
+            height: 500
+          },
+          {
+            breeds: [],
+            categories: [],
+            id: '78',
+            url: 'url2.com',
+            width: 400,
+            height: 400
+          }
+        ]
+      }
+
+      expect(result).toEqual(expected)
     })
   })
 })
