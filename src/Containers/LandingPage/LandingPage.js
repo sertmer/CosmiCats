@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { getNasaImages } from '../../apiCalls';
-import { setNasaImages } from '../../actions';
+import { getNasaImages } from '../../utils/apiCalls';
+import { setNasaImages } from '../../actions/';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './LandingPage.scss';
@@ -11,12 +11,12 @@ export class LandingPage extends Component {
     getNasaImages()
       .then(data => this.cleanData(data))
       .then(data => this.props.setNasaImages(data))
-  
+      .catch(err => console.log(err))
   }
 
   cleanData = (data) => {
-    let cleanedImage
     return data.collection.items.map(item => {
+      let cleanedImage;
       return cleanedImage = {
         img: item.links[0].href,
         id: item.data[0].nasa_id,
