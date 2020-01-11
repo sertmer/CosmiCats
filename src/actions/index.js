@@ -7,3 +7,8 @@ export const setNasaImages = images => ({
   type: 'SET_NASA_IMAGES',
   images
 })
+
+export const setCatImages = images => ({
+  type: 'SET_CAT_IMAGES',
+  images
+})
