@@ -1,14 +1,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { LandingPage, mapDispatchToProps } from './LandingPage';
-import { setNasaImages } from '../../actions';
+import { setNasaImages, setCatImages } from '../../actions';
 
 describe('LandingPage', () => {
 
   let wrapper
 
   beforeEach(() => {
-    wrapper = shallow(<LandingPage />)
+    wrapper = shallow(
+      <LandingPage 
+        setNasaImage={setNasaImages} 
+        setCatImages={setCatImages}
+      />
+    )
   })
 
   describe('Unit Tests', () => {
@@ -50,7 +55,7 @@ describe('LandingPage', () => {
   })
 
   describe('mapDispatchToProps', () => {
-    it('calls dispatch with images when setImages is invoked', () => {
+    it('calls dispatch with images when setNasaImages is invoked', () => {
       const mockDispatch = jest.fn();
       const mockActionToDispatch = setNasaImages([
         {
