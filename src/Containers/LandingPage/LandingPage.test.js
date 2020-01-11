@@ -15,6 +15,38 @@ describe('LandingPage', () => {
     it.skip('should match the snapshot', () => {
       expect(wrapper).toMatchSnapshot()
     })
+
+    it('should return an array of cleaned data when cleanData is invoked', () => {
+      const mockDataToClean = {
+        collection: {
+          items: [
+            {
+              links: [{rel: 'preview', href: 'somelink.com'}],
+              data: [{keywords: [], date_created: 'dec 12', nasa_id: '12'}]
+            },
+            {
+              links: [{rel: 'preview', href: 'somelink2.com'}],
+              data: [{keywords: [], date_created: 'dec 13', nasa_id: '13'}]
+            }
+          ]
+        }
+      }
+
+      const expected = [
+        {
+          img: 'somelink.com',
+          id: '12',
+          dateCreated: 'dec 12'
+        },
+        {
+          img: 'somelink2.com',
+          id: '13',
+          dateCreated: 'dec 13'
+        }
+     ]
+
+     expect(wrapper.instance().cleanData(mockDataToClean)).toEqual(expected)
+    })
   })
 
   describe('mapDispatchToProps', () => {
