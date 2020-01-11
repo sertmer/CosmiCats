@@ -53,3 +53,59 @@ exports[`Login Unit Tests should match the snapshot 1`] = `
   </form>
 </section>
 `;
+
+exports[`Login Unit Tests should match the snapshot when there is state is complete 1`] = `
+<section
+  className="mission-card"
+>
+  <article
+    className="belief-card card"
+  >
+    <h2>
+      Our Belief
+    </h2>
+    <p>
+      Cats are Aliens
+    </p>
+  </article>
+  <form
+    className="binding-contract card"
+  >
+    <label
+      htmlFor="name"
+    >
+      Name: 
+    </label>
+    <input
+      className="user-name"
+      name="name"
+      onChange={[Function]}
+      type="text"
+      value="Davey Havok"
+    />
+    <div>
+      <input
+        className="agree-radio"
+        name="hasAgreed"
+        onClick={[Function]}
+        type="radio"
+      />
+      <label
+        htmlFor="hasAgreed"
+      >
+        I Agree
+      </label>
+    </div>
+    <Link
+      to="/research"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Start Research
+      </button>
+    </Link>
+  </form>
+</section>
+`;
