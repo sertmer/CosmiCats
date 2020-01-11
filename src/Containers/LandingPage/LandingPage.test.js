@@ -86,5 +86,48 @@ describe('LandingPage', () => {
 
       expect(mockDispatch).toHaveBeenCalledWith(mockActionToDispatch)
     })
+
+    it('calls Dispatch with images when setCatImages is invoked', () => {
+      const mockDispatch = jest.fn()
+      const mockActionToDispatch = setCatImages([
+        {
+          breeds: [],
+          categories: [],
+          id: '58',
+          url: 'url.com',
+          width: 500,
+          height: 500
+        },
+        {
+          breeds: [],
+          categories: [],
+          id: '78',
+          url: 'url2.com',
+          width: 400,
+          height: 400
+        }
+      ])
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.setCatImages([
+        {
+          breeds: [],
+          categories: [],
+          id: '58',
+          url: 'url.com',
+          width: 500,
+          height: 500
+        },
+        {
+          breeds: [],
+          categories: [],
+          id: '78',
+          url: 'url2.com',
+          width: 400,
+          height: 400
+        }
+      ])
+
+      expect(mockDispatch).toHaveBeenCalledWith(mockActionToDispatch)
+    })
   })
 })
