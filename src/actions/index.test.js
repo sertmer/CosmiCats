@@ -100,4 +100,48 @@ describe('actions', () => {
       expect(result).toEqual(expected)
     })
   })
+
+  describe('addToEvidence', () => {
+    it('should have a type of ADD_EVIDENCE', () => {
+      const mockEvidence = {
+        img: 'someURL.com',
+        id: 'ab1',
+        dateCreated: '12-12-12'
+      }
+      
+      const result = actions.addToEvidence(mockEvidence)
+
+      const expected = {
+        type: 'ADD_EVIDENCE',
+        evidence: {
+          img: 'someURL.com',
+          id: 'ab1',
+          dateCreated: '12-12-12'
+        }
+      }
+      expect(result).toEqual(expected)
+    })
+  })
+
+  describe('removeFromEvidence', () => {
+    it('should have a type of REMOVE_EVIDENCE', () => {
+      const mockEvidence = {
+        img: 'someURL.com',
+        id: 'ab1',
+        dateCreated: '12-12-12'
+      }
+      
+      const result = actions.removeFromEvidence(mockEvidence)
+
+      const expected = {
+        type: 'REMOVE_EVIDENCE',
+        evidence: {
+          img: 'someURL.com',
+          id: 'ab1',
+          dateCreated: '12-12-12'
+        }
+      }
+      expect(result).toEqual(expected)
+    })
+  })
 })
