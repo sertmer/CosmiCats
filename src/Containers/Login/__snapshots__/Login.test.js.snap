@@ -32,29 +32,24 @@ exports[`Login Unit Tests should match the snapshot 1`] = `
     <div>
       <input
         className="agree-radio"
-        name="agree"
+        name="hasAgreed"
+        onClick={[Function]}
         type="radio"
       />
       <label
-        htmlFor="agree"
+        htmlFor="hasAgreed"
       >
         I Agree
       </label>
     </div>
-    <Link
-      to="/research"
-    >
-      <button
-        type="button"
-      >
-        Start Research
-      </button>
-    </Link>
+    <p>
+      Complete the form to proceed
+    </p>
   </form>
 </section>
 `;
 
-exports[`Login Unit Tests should match the snapshot when there is state is complete 1`] = `
+exports[`Login Unit Tests should match the snapshot when the is state is complete 1`] = `
 <section
   className="mission-card"
 >

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Login, mapDispatchToProps } from './Login';
 import { setUser } from '../../actions'
-import { LandingPage } from '../LandingPage/LandingPage';
+// import { LandingPage } from '../LandingPage/LandingPage';
 
 describe('Login', () => {
 
@@ -17,11 +17,11 @@ describe('Login', () => {
 
   describe('Unit Tests', () => {
 
-    it.skip('should match the snapshot', () => {
+    it('should match the snapshot', () => {
       expect(wrapper).toMatchSnapshot()
     })
 
-    it.skip('should match the snapshot when there is state is complete', () => {
+    it('should match the snapshot when the is state is complete', () => {
       const mockState = { name: 'Davey Havok', hasAgreed: true }
       wrapper.instance().setState(mockState)
       expect(wrapper).toMatchSnapshot()
@@ -77,10 +77,10 @@ describe('Login', () => {
     })
 
     describe('setUser on click', () => {
-      it.skip('should invoke setUser on click', () => {
+      it('should invoke setUser on click', () => {
         const mockSetUser = jest.fn()
         const mockState = { name: 'Davey Havok', hasAgreed: true }
-        wrapper = shallow(<LandingPage setUser={mockSetUser} />)
+        wrapper = shallow(<Login setUser={mockSetUser} />)
 
         wrapper.instance().setState(mockState)
 
