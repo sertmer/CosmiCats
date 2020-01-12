@@ -21,7 +21,7 @@ describe('LandingPage', () => {
       expect(wrapper).toMatchSnapshot()
     })
 
-    it('should return an array of cleaned data when cleanData is invoked', () => {
+    it('should return an array of cleaned nasa data when cleanData is invoked with nasa', () => {
       const mockDataToClean = {
         collection: {
           items: [
@@ -50,7 +50,33 @@ describe('LandingPage', () => {
         }
      ]
 
-     expect(wrapper.instance().cleanData(mockDataToClean)).toEqual(expected)
+     expect(wrapper.instance().cleanData('nasa', mockDataToClean)).toEqual(expected)
+    })
+
+    it('should return an cleaned data cat data when cleanData is invoked with cats', () => {
+      const mockData = [
+        {
+            breeds: [],
+            categories: [
+                {
+                    id: 2,
+                    name: 'space'
+                }
+            ],
+            id: '4v',
+            url: 'someURL.com',
+            width: 487,
+            height: 500
+        }
+    ]
+
+      const expected = {
+        img: 'someURL.com',
+        id: '4v',
+        dateCreated: "censored"
+      }
+
+      expect(wrapper.instance().cleanData('cats', mockData)).toEqual(expected)
     })
   })
 
