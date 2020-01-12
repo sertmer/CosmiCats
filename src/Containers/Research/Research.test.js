@@ -10,17 +10,27 @@ describe('Research', () => {
   let mockCaseStudy
 
   beforeEach(() => {
+    mockAddToEvidence = jest.fn()
     mockCaseStudy = {
       img: 'url.com',
       id: 'ab1',
       dateCreated: '12-12-12'
     }
-    wrapper = shallow(<Research caseStudy={mockCaseStudy}/>)
+    wrapper = shallow(<Research 
+      caseStudy={mockCaseStudy} 
+      addToEvidence={mockAddToEvidence}
+    />)
   })
 
   describe('Research unit tests', () => {
     it('should match the snapshot', () => {
       expect(wrapper).toMatchSnapshot()
+    })
+
+    it('should call addToEvidence when the user clicks the button', () => {
+      wrapper.find('button').simulate('click')
+
+      expect(mockAddToEvidence).toHaveBeenCalledWith(mockCaseStudy)
     })
   })
 
