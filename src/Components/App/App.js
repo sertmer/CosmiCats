@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../Containers/Header/Header';
 import LandingPage from '../../Containers/LandingPage/LandingPage';
 import Login from '../../Containers/Login/Login';
-import ResearchContainer from '../ResearchContainer/ResearchContainer';
+import ResearchContainer from '../../Containers/ResearchContainer/ResearchContainer';
 import './App.scss';
 import { Route } from 'react-router-dom';
 

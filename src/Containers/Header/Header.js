@@ -11,8 +11,8 @@ export const Header = ({user, setUser}) => {
     <header>
       <h1 className='cccr-header'>The Center for CosmiCat Research</h1>
       { user && 
-        <div>
-          <h2>Welcome Dr. {user}</h2>
+        <div className='user-name'>
+          <h2 className='header-h2'>Welcome Dr. {user}</h2>
           <Link to='/'>
             <button onClick={() => setUser('')}>Sign Out</button>
           </Link>
@@ -20,7 +20,6 @@ export const Header = ({user, setUser}) => {
       }
       <div className='icon-div'>
         <img className="icon" src={alien} alt='small green alien icon' />
-        <p className='triple-equals'>===</p>
         <img className="icon" src={cat} alt='small green cat icon' />
       </div>
     </header>

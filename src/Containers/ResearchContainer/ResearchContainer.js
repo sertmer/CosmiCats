@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './ResearchContainer.scss';
-import Research from '../Research/Research'
-import { connect } from 'react-redux'
+import Research from '../Research/Research';
+import { connect } from 'react-redux';
 
 export class ResearchContainer extends Component {
   constructor(props) {

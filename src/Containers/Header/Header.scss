@@ -4,7 +4,7 @@
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .icon {
@@ -14,7 +14,8 @@ header {
 .cccr-header {
   color: white;
   font-family: $accent-font;
-  margin: 0;
+  margin: 0 5% 0 0;
+  width: 90%;
 }
 
 .triple-equals {
@@ -26,4 +27,16 @@ header {
 .icon-div {
   display: flex;
   flex-direction: row;
+  width: 5%;
+}
+
+.user-name {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.header-h2 {
+  margin: 0;
 }
