@@ -24,3 +24,10 @@
 .research-details {
   padding: 2%;
 }
+
+.save-to-faves-btn {
+  height: 10%;
+  width: 90%;
+  @include rounded-corners(5px);
+  margin: 2%;
+}

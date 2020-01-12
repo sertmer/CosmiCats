@@ -1,7 +1,10 @@
 import React from 'react';
-import './Research.scss'
+import { connect } from 'react-redux';
+import { addToEvidence } from '../../actions'
+import './Research.scss';
 
-export const Research = ({ caseStudy }) => {
+
+export const Research = ({ caseStudy, addToEvidence }) => {
   return (
     <article className='research'>
       <img className='research-img'
@@ -13,10 +16,19 @@ export const Research = ({ caseStudy }) => {
         <p>{caseStudy.id}</p>
         <h2>date taken</h2>
         <p>{caseStudy.dateCreated}</p>
-        <h2>photographer</h2>
+        <button
+            className='save-to-faves-btn'
+            type='button' 
+            onClick={() => addToEvidence(caseStudy)}
+          > save to evidence
+          </button>
       </div>
     </article>
   )
 }
 
-export default Research;
+export const mapDispatchToProps = dispatch => ({
+  addToEvidence: evidence => dispatch(addToEvidence(evidence))
+})
+
+export default connect(null, mapDispatchToProps)(Research);
