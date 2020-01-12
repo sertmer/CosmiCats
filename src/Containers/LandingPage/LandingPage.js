@@ -9,7 +9,7 @@ export class LandingPage extends Component {
   
   componentDidMount() {
     getNasaImages()
-      .then(data => this.cleanData(data))
+      .then(data => this.cleanData('nasa', data))
       .then(data => this.props.setNasaImages(data))
       .catch(err => console.log(err))
     this.createCatsArray()
@@ -17,23 +17,31 @@ export class LandingPage extends Component {
 
   createCatsArray = () => {
     let cats = []
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 40; i++) {
       getCatsInSpace()
-        .then(data => cats.push(data[0]))
+        .then(data => cats.push(this.cleanData('cats', data)))
     }
     this.props.setCatImages(cats)
   }
 
-  cleanData = (data) => {
+  cleanData = (type, data) => {
     let cleanedData;
+    if (type === 'nasa') {
       return data.collection.items.map(item => {
         return cleanedData = {
-          img: item.links[0].href,
-          id: item.data[0].nasa_id,
-          dateCreated: item.data[0].date_created
+            img: item.links[0].href,
+            id: item.data[0].nasa_id,
+            dateCreated: item.data[0].date_created
+          }
         }
+      )
+    } else {
+      return cleanedData = {
+        img: data[0].url,
+        id: data[0].id,
+        dateCreated: 'censored'
       }
-    )
+    }
   }
 
   render() {
