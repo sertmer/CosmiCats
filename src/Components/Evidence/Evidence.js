@@ -1,9 +1,16 @@
 import React from 'react';
 import './Evidence.scss';
 
-export const Evidence = () => {
+export const Evidence = ({evidence}) => {
   return (
-    <p>hello</p>
+    <article className='evidence-card'>
+      <img className='evidence-img' src={evidence.img}/>
+      <div className='evidence-details'>
+        <p>{evidence.id}</p>
+        <p>{evidence.dateCreated}</p>
+        <button type='button'>delete</button>
+      </div>
+    </article>
   )
 }
 

@@ -1,11 +1,21 @@
 import React from 'react';
 import './EvidenceContainer.scss';
 import Evidence from '../Evidence/Evidence';
+import { connect } from 'react-redux';
 
-export const EvidenceContainer = () => {
+export const EvidenceContainer = ({evidence}) => {
+  const displayEvidence = evidence.map(evi => {
+    return <Evidence evidence={evi} key={evi.id} />
+  })
   return (
-    <Evidence />
+    <section className='evidence-container'>
+      {displayEvidence}
+    </section>
   )
 }
 
-export default EvidenceContainer;
+export const mapStateToProps = state => ({
+  evidence: state.evidence
+})
+
+export default connect(mapStateToProps)(EvidenceContainer);

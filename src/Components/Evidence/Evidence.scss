@@ -1,0 +1,27 @@
+@import '../../_scss/variables';
+@import '../../_scss/mixins';
+
+.evidence-card {
+  width: 29.2%;
+  background: linear-gradient(
+    0deg, 
+    rgba(193,193,193,1) 0%, 
+    rgba(245,245,245,1) 100%
+  );
+  padding: 1%;
+  @include rounded-corners(5px);
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.evidence-img {
+  height: 400px;
+  width: 400px;
+  @include rounded-corners(5px);
+}
+
+.evidence-details {
+  text-align: center;
+}
