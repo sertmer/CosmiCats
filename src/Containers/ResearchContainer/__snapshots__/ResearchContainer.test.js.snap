@@ -7,9 +7,9 @@ exports[`ResearchContainer ResearchContainer unit tests should match the snapsho
   <Connect(Research)
     caseStudy={
       Object {
-        "dateCreated": "12-12-12",
-        "id": "ab1",
-        "img": "url.com",
+        "dateCreated": "12-13-12",
+        "id": "ab2",
+        "img": "url2.com",
       }
     }
   />
