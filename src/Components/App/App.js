@@ -3,7 +3,7 @@ import Header from '../../Containers/Header/Header';
 import LandingPage from '../../Containers/LandingPage/LandingPage';
 import Login from '../../Containers/Login/Login';
 import ResearchContainer from '../../Containers/ResearchContainer/ResearchContainer';
-import EvidenceContainer from '../EvidenceContainer/EvidenceContainer'
+import EvidenceContainer from '../../Containers/EvidenceContainer/EvidenceContainer'
 import './App.scss';
 import { Route } from 'react-router-dom';
 
