@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Evidence Evidence unit tests should match the snapshot 1`] = `
+<article
+  className="evidence-card"
+>
+  <img
+    className="evidence-img"
+    src="someURL.com"
+  />
+  <div
+    className="evidence-details"
+  >
+    <h2>
+      Nasa Identification Number
+    </h2>
+    <p>
+      ab1
+    </p>
+    <h2>
+      Date Captured
+    </h2>
+    <p>
+      12-12-12
+    </p>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      delete
+    </button>
+  </div>
+</article>
+`;
