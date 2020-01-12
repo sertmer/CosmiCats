@@ -17,3 +17,8 @@ export const addToEvidence = evidence => ({
   type: 'ADD_EVIDENCE',
   evidence
 })
+
+export const removeFromEvidence = evidence => ({
+  type: 'REMOVE_EVIDENCE',
+  evidence
+})
