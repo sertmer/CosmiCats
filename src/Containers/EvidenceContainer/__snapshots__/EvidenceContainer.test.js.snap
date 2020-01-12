@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EvidenceContainer EvidenceContainer unit tests should match the snapshot 1`] = `
+<section
+  className="evidence-container"
+>
+  <Connect(Evidence)
+    evidence={
+      Object {
+        "dateCreated": "12-12-12",
+        "id": "ab1",
+        "img": "someURL.com",
+      }
+    }
+    key="ab1"
+  />
+</section>
+`;
