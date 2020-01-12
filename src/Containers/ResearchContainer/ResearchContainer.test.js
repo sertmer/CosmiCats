@@ -34,10 +34,24 @@ describe('ResearchContainer', () => {
     it('should match the snapshot', () => {
       expect(wrapper).toMatchSnapshot()
     })
+
+    it('should increment state.counter when user clicks view next', () => {
+      wrapper.setState({counter: 0})
+      wrapper.find('.research-btn').simulate('click')
+
+      expect(wrapper.state('counter')).toEqual(1)
+    })
+
+    it('should decrement state.counter when user clicks view previous', () => {
+      wrapper.setState({counter: 139})
+      wrapper.find('.research-btn').simulate('click')
+
+      expect(wrapper.state('counter')).toEqual(138)
+    })
   })
 
   describe('mapStateToProps', () => {
-    it('should return an objext with the images', () => {
+    it('should return an object with the images', () => {
       const mockState = {
         nasaImages: mockNasaImages,
         catImages: mockCatImages,
