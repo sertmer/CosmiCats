@@ -17,7 +17,7 @@ export const getCatsInSpace = () => {
     }
   }
 
-  return fetch('https://api.thecatapi.com/v1/images/search?category_ids=2')
+  return fetch('https://api.thecatapi.com/v1/images/search?category_ids=2', options)
     .then(res => {
       if (!res.ok) {
         throw Error('error fetching cats in space')
