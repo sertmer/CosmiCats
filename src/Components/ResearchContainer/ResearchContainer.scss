@@ -1,0 +1,24 @@
+@import '../../_scss/variables';
+@import '../../_scss/mixins';
+
+.research-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1%;
+}
+
+.research-btn {
+  height: 10%;
+  width: 20%;
+  @include rounded-corners(5px);
+  margin: 2%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  width: 25%;
+}
+

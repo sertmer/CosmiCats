@@ -1,0 +1,26 @@
+@import '../../_scss/variables';
+@import '../../_scss/mixins';
+
+.research {
+  display: flex;
+  flex-direction: row;
+  background: rgb(193,193,193);
+  background: linear-gradient(
+    0deg, 
+    rgba(193,193,193,1) 0%, 
+    rgba(245,245,245,1) 100%
+  );
+  padding: 1%;
+  @include rounded-corners(5px);
+  width: 70%;
+}
+
+.research-img {
+  width: 60vw;
+  height: 80vh;
+  @include rounded-corners(5px);
+}
+
+.research-details {
+  padding: 2%;
+}

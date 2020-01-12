@@ -35,12 +35,20 @@ export class ResearchContainer extends Component {
   render() {
     const { counter, images } = this.state
     return(
-      <section>
+      <section className='research-container'>
         {images[counter] && <Research caseStudy={images[counter]} />}
-        <button 
-        type='button' 
-        onClick={() => this.setState({counter: this.state.counter + 1})}> next research 
-        </button>
+        <div className='button-container'>
+          {counter < 139 && <button
+            className='research-btn'
+            type='button' 
+            onClick={() => this.setState({counter: this.state.counter + 1})}> view next 
+          </button>}
+          {counter > 0 && <button
+            className='research-btn'
+            type='button' 
+            onClick={() => this.setState({counter: this.state.counter - 1})}> view previous
+          </button>}
+        </div>
       </section>
     )
     }
