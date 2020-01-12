@@ -14,13 +14,13 @@ export const Header = ({ user, setUser, evidence }) => {
         <div className='user-name'>
           <h2 className='header-h2'>Welcome Dr. {user}</h2>
           <Link to='/'>
-            <button onClick={() => setUser('')}>Sign Out</button>
+            <button className='signout-btn' onClick={() => setUser('')}>Sign Out</button>
           </Link>
         </div>
       }
       {evidence.length > 0 && 
         <Link to='/evidence'>
-          <button type='button'>Evidence</button>
+          <button className='evidence-btn' type='button'>Evidence</button>
         </Link>
       }
       <div className='icon-div'>

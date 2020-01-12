@@ -6,20 +6,31 @@ import { setUser } from '../../actions'
 describe('Header', () => {
 
   let wrapper
+  let mockSetUser
+  let mockEvidence
 
   beforeEach(() => {
-    wrapper = shallow(<Header />)
+    mockEvidence = [{id:'ab1', img: 'someURL.com', dateCreated: '12-12-12'}]
+    mockSetUser = jest.fn()
+    wrapper = shallow(<Header user={'Davey Havok'} setUser={mockSetUser} evidence={mockEvidence}/>)
   })
 
   describe('Header unit tests', () => {
 
-    it.skip('should match the snapshot', () => {
+    it('should match the snapshot', () => {
+      wrapper = shallow(<Header evidence={mockEvidence}/>)
       expect(wrapper).toMatchSnapshot()
     })
 
-    it.skip('should match the snapshot when there is a user in props', () => {
-      wrapper = shallow(<Header user={'Davey Havok'} />)
+    it('should match the snapshot when there is a user in props', () => {
       expect(wrapper).toMatchSnapshot()
+    })
+
+    it('should call setUser on signout click', () => {
+     
+      wrapper.find('.signout-btn').simulate('click');
+
+      expect(mockSetUser).toHaveBeenCalledWith('')
     })
   })
 
