@@ -2,11 +2,25 @@
 
 exports[`Header Header unit tests should match the snapshot 1`] = `
 <header>
-  <h1
-    className="cccr-header"
+  <Link
+    to="/research"
   >
-    The Center for CosmiCat Research
-  </h1>
+    <h1
+      className="cccr-header"
+    >
+      The Center for CosmiCat Research
+    </h1>
+  </Link>
+  <Link
+    to="/evidence"
+  >
+    <button
+      className="evidence-btn"
+      type="button"
+    >
+      Evidence
+    </button>
+  </Link>
   <div
     className="icon-div"
   >
@@ -15,11 +29,6 @@ exports[`Header Header unit tests should match the snapshot 1`] = `
       className="icon"
       src="alien.svg"
     />
-    <p
-      className="triple-equals"
-    >
-      ===
-    </p>
     <img
       alt="small green cat icon"
       className="icon"
@@ -31,13 +40,21 @@ exports[`Header Header unit tests should match the snapshot 1`] = `
 
 exports[`Header Header unit tests should match the snapshot when there is a user in props 1`] = `
 <header>
-  <h1
-    className="cccr-header"
+  <Link
+    to="/research"
   >
-    The Center for CosmiCat Research
-  </h1>
-  <div>
-    <h2>
+    <h1
+      className="cccr-header"
+    >
+      The Center for CosmiCat Research
+    </h1>
+  </Link>
+  <div
+    className="user-name-div"
+  >
+    <h2
+      className="header-h2"
+    >
       Welcome Dr. 
       Davey Havok
     </h2>
@@ -45,12 +62,23 @@ exports[`Header Header unit tests should match the snapshot when there is a user
       to="/"
     >
       <button
+        className="signout-btn"
         onClick={[Function]}
       >
         Sign Out
       </button>
     </Link>
   </div>
+  <Link
+    to="/evidence"
+  >
+    <button
+      className="evidence-btn"
+      type="button"
+    >
+      Evidence
+    </button>
+  </Link>
   <div
     className="icon-div"
   >
@@ -59,11 +87,6 @@ exports[`Header Header unit tests should match the snapshot when there is a user
       className="icon"
       src="alien.svg"
     />
-    <p
-      className="triple-equals"
-    >
-      ===
-    </p>
     <img
       alt="small green cat icon"
       className="icon"

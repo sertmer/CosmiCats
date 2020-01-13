@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Research Research unit tests should match the snapshot 1`] = `
+<article
+  className="research"
+>
+  <img
+    alt="Outer space from Nasas files"
+    className="research-img"
+    src="url.com"
+  />
+  <div
+    className="research-details"
+  >
+    <h2>
+      nasa id
+    </h2>
+    <p>
+      ab1
+    </p>
+    <h2>
+      date taken
+    </h2>
+    <p>
+      12-12-12
+    </p>
+    <button
+      className="save-to-faves-btn"
+      onClick={[Function]}
+      type="button"
+    >
+       save to evidence
+    </button>
+  </div>
+</article>
+`;

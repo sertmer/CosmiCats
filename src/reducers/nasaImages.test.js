@@ -1,6 +1,6 @@
 import { nasaImages } from '../reducers/nasaImages'
 
-describe('nasaImages', () => {
+describe('nasaImages reducer', () => {
   it('should return the initial state', () => {
     const expected = []
     const result = nasaImages(undefined, {})

@@ -1,0 +1,10 @@
+@import '../../_scss/variables';
+@import '../../_scss/mixins';
+
+.evidence-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  overflow: auto;
+}
+

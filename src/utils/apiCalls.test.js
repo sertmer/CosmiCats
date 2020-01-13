@@ -83,9 +83,16 @@ describe('apiCalls', () =>  {
     })
 
     it('should call fetch with the correct URL', () => {
+      const mockOptions = {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': '830d5d50-e96d-404e-ab7a-870d94a52a8f',
+        }
+      }
       getCatsInSpace()
 
-      expect(window.fetch).toHaveBeenCalledWith('https://api.thecatapi.com/v1/images/search?category_ids=2')
+      expect(window.fetch).toHaveBeenCalledWith('https://api.thecatapi.com/v1/images/search?category_ids=2', mockOptions)
     })
 
     it('should return a cat', () => {

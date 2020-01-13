@@ -1,6 +1,6 @@
 import { catImages } from './catImages';
 
-describe('catImages', () => {
+describe('catImages reducer', () => {
   it('should return the initial state', () => {
     const expected = []
     const result = catImages(undefined, [])
@@ -8,7 +8,7 @@ describe('catImages', () => {
     expect(result).toEqual(expected)
   })
 
-  it('should return the correct state it the type is SET_CAT_IMAGES', () => {
+  it('should return the correct state if the type is SET_CAT_IMAGES', () => {
     const initialState = []
     const mockCatImages = [
       {

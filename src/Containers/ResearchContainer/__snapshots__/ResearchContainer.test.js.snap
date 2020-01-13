@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResearchContainer ResearchContainer unit tests should match the snapshot 1`] = `
+<section
+  className="research-container"
+>
+  <Connect(Research)
+    caseStudy={
+      Object {
+        "dateCreated": "12-13-12",
+        "id": "ab2",
+        "img": "url2.com",
+      }
+    }
+  />
+  <div
+    className="button-container"
+  >
+    <button
+      className="research-btn"
+      onClick={[Function]}
+      type="button"
+    >
+       view next
+    </button>
+  </div>
+</section>
+`;

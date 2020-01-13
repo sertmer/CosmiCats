@@ -1,21 +1,32 @@
-@import '../../_scss/mixins';
 @import '../../_scss/variables';
+@import '../../_scss/mixins';
 
-.landing-page {
+.evidence-card {
+  width: 29.2%;
+  background: linear-gradient(
+    0deg, 
+    rgba(193,193,193,1) 0%, 
+    rgba(245,245,245,1) 100%
+  );
+  padding: 1%;
+  @include rounded-corners(5px);
+  margin: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  // justify-content: space-around;
-  margin-top: 10%;
 }
 
-.tagline {
-  font-size: 5em;
-  color: $alien-green;
+.evidence-img {
+  height: 400px;
+  width: 400px;
+  @include rounded-corners(5px);
 }
 
-.login-button {
+.evidence-details {
+  text-align: center;
+}
+
+.delete-evidence-btn {
   width: 10em;
   @include rounded-corners(5px);
   background: rgb(69,198,141);
@@ -36,6 +47,6 @@
   transition-property: transform;
 }
 
-.login-button:hover {
+.delete-evidence-btn:hover {
   transform: scale(1.1);
 }

@@ -2,26 +2,84 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { LandingPage, mapDispatchToProps } from './LandingPage';
 import { setNasaImages, setCatImages } from '../../actions';
+import { getNasaImages, getCatsInSpace } from '../../utils/apiCalls';
+jest.mock('../../utils/apiCalls');
 
 describe('LandingPage', () => {
 
   let wrapper
+  let mockSetNasaImages
+  let mockSetCatImages
 
   beforeEach(() => {
+    mockSetNasaImages = jest.fn()
+    mockSetCatImages = jest.fn()
+    getNasaImages.mockImplementation(() => {
+      return Promise.resolve(
+       {collection: {items: [{
+          links: [
+              {
+                  rel: 'preview',
+                  render: 'image',
+                  href: 'https://images-assets.nasa.gov/image/ARC-1983-AC83-0565-1/ARC-1983-AC83-0565-1~thumb.jpg'
+              }
+          ],
+          data: [
+              {
+                  description: 'Andromeda galaxy from Infrared Astronomical Satellite  (ref; 83-HC-316)',
+                  media_type: 'image',
+                  nasa_id: 'ARC-1983-AC83-0565-1',
+                  date_created: '1983-08-01T00:00:00Z',
+                  title: 'ARC-1983-AC83-0565-1',
+                  center: 'ARC',
+                  photographer: 'IRAS Imagery',
+                  keywords: [
+                      'Andromeda Galaxy'
+                  ]
+              }
+          ],
+          href: 'https://images-assets.nasa.gov/image/ARC-1983-AC83-0565-1/collection.json'
+        }]
+      }}
+      )
+    })
+    getCatsInSpace.mockImplementation(() => {
+      return Promise.resolve([[
+        {
+            breeds: [],
+            categories: [
+                {
+                    id: 2,
+                    name: 'space'
+                }
+            ],
+            id: '5i4',
+            url: 'https://cdn2.thecatapi.com/images/5i4.jpg',
+            width: 500,
+            height: 500
+        }
+    ]])
+    })
     wrapper = shallow(
       <LandingPage 
-        setNasaImage={setNasaImages} 
-        setCatImages={setCatImages}
+        setNasaImage={mockSetNasaImages} 
+        setCatImages={mockSetCatImages}
       />
     )
   })
-
+  
   describe('Unit Tests', () => {
-    it.skip('should match the snapshot', () => {
+    it('should retrieve nasa images after mounting', async () => {
+      wrapper.instance().createCatsArray = jest.fn()
+      expect(getNasaImages).toHaveBeenCalled()
+    })
+    
+    it('should match the snapshot', () => {
       expect(wrapper).toMatchSnapshot()
     })
+    
 
-    it('should return an array of cleaned data when cleanData is invoked', () => {
+    it('should return an array of cleaned nasa data when cleanData is invoked with nasa', () => {
       const mockDataToClean = {
         collection: {
           items: [
@@ -50,7 +108,33 @@ describe('LandingPage', () => {
         }
      ]
 
-     expect(wrapper.instance().cleanData(mockDataToClean)).toEqual(expected)
+     expect(wrapper.instance().cleanData('nasa', mockDataToClean)).toEqual(expected)
+    })
+
+    it('should return an cleaned data cat data when cleanData is invoked with cats', () => {
+      const mockData = [
+        {
+            breeds: [],
+            categories: [
+                {
+                    id: 2,
+                    name: 'space'
+                }
+            ],
+            id: '4v',
+            url: 'someURL.com',
+            width: 487,
+            height: 500
+        }
+    ]
+
+      const expected = {
+        img: 'someURL.com',
+        id: '4v',
+        dateCreated: "censored"
+      }
+
+      expect(wrapper.instance().cleanData('cats', mockData)).toEqual(expected)
     })
   })
 

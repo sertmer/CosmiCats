@@ -20,5 +20,10 @@ exports[`App App unit tests should match the snapshot 1`] = `
     path="/research"
     render={[Function]}
   />
+  <Route
+    exact={true}
+    path="/evidence"
+    render={[Function]}
+  />
 </main>
 `;
