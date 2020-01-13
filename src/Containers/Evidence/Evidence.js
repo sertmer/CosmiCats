@@ -13,6 +13,7 @@ export const Evidence = ({evidence, removeFromEvidence}) => {
         <h2>Date Captured</h2>
         <p>{evidence.dateCreated}</p>
         <button 
+          className='delete-evidence-btn'
           type='button'
           onClick={() => removeFromEvidence(evidence)}
         >delete</button>
