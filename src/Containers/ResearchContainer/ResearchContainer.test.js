@@ -32,6 +32,20 @@ describe('ResearchContainer', () => {
 
   describe('ResearchContainer unit tests', () => {
     it('should match the snapshot', () => {
+      wrapper.setState({images: [
+        {
+          id: 'ab2',
+          img: 'url2.com',
+          dateCreated: '12-13-12'
+        },
+        {
+          id: 'ab1',
+          img: 'url.com',
+          dateCreated: '12-12-12'
+        }
+      ]
+    })
+    
       expect(wrapper).toMatchSnapshot()
     })
 
