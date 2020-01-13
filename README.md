@@ -12,6 +12,10 @@ In creating this app, I focused on demonstrating mastery of the following:
 * Asynchronous JavaScript
 * Work within a short time frame (6 days) to deliver a unique product for my audience (people who believe cats are aliens)
 
+## Installation
+
+To access this repo, simply clone down and run `npm install` to access the necessary packages.  For the best viewing experience, run `npm run start` and copy and paste your local server into the browser.
+
 ## Tech Stack
 * Nasa Images API
 * The Cat API
@@ -22,18 +26,17 @@ In creating this app, I focused on demonstrating mastery of the following:
 * Fetch API
 * SCSS
 
-## Installation
-
-To access this repo, simply clone down and run `npm install` to access the necessary packages.  For the best viewing experience, run `npm run start` and copy and paste your local server into the browser.
-
 ## User Interface and User Experience
-![2020-01-13 12 40 25](https://user-images.githubusercontent.com/49926352/72286291-13e79500-3602-11ea-8d35-7bcde3ed7bde.gif)
+![User Flow](https://user-images.githubusercontent.com/49926352/72286291-13e79500-3602-11ea-8d35-7bcde3ed7bde.gif)
 Users can:
 * sign in
 * view research
 * find evidence that cats are aliens
 * save it evidence
 * delete evidence
+
+## Project Board
+[View Project Board](https://trello.com/b/XctYJTYX/cosmicats)
 
 ## Future Iterations 
 Future iterations of this project will include the following:
