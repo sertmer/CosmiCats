@@ -9,7 +9,7 @@ import cat from '../../images/cat.svg';
 export const Header = ({ user, setUser, evidence }) => {
   return (
     <header>
-      <Link to='/research' >
+      <Link to='/' >
         <h1 className='cccr-header'>The Center for CosmiCat Research</h1>
       </Link>
       {user &&
