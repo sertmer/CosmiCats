@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { addToEvidence } from '../../actions'
 import './Research.scss';
 import PropTypes from 'prop-types';
-import { ResearchContainer } from '../ResearchContainer/ResearchContainer';
 
 export const Research = ({ caseStudy, addToEvidence }) => {
   return (

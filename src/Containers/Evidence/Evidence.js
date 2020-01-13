@@ -3,12 +3,14 @@ import { connect } from 'react-redux';
 import { removeFromEvidence } from '../../actions/';
 import './Evidence.scss';
 import PropTypes from 'prop-types';
-import { EvidenceContainer } from '../EvidenceContainer/EvidenceContainer';
 
 export const Evidence = ({evidence, removeFromEvidence}) => {
   return (
     <article className='evidence-card'>
-      <img className='evidence-img' src={evidence.img}/>
+      <img 
+        alt='evidence that cats are aliens' className='evidence-img' 
+        src={evidence.img}
+      />
       <div className='evidence-details'>
         <h2>Nasa Identification Number</h2>
         <p>{evidence.id}</p>
