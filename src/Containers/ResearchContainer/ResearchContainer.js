@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './ResearchContainer.scss';
 import Research from '../Research/Research';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 export class ResearchContainer extends Component {
   constructor(props) {
@@ -60,3 +61,8 @@ export const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(ResearchContainer);
+
+ResearchContainer.propTypes = {
+  nasaImages: PropTypes.array,
+  catImages: PropTypes.array,
+}

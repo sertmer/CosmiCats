@@ -2,7 +2,8 @@ import React from 'react';
 import './EvidenceContainer.scss';
 import Evidence from '../Evidence/Evidence';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export const EvidenceContainer = ({evidence}) => {
   const displayEvidence = evidence.map(evi => {
@@ -28,3 +29,7 @@ export const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(EvidenceContainer);
+
+EvidenceContainer.propTypes = {
+  evidence: PropTypes.array
+}

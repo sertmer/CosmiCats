@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addToEvidence } from '../../actions'
 import './Research.scss';
-
+import PropTypes from 'prop-types';
+import { ResearchContainer } from '../ResearchContainer/ResearchContainer';
 
 export const Research = ({ caseStudy, addToEvidence }) => {
   return (
@@ -32,3 +33,8 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(null, mapDispatchToProps)(Research);
+
+Research.propTypes = {
+  caseStudy: PropTypes.object,
+  addToEvidence: PropTypes.func
+}

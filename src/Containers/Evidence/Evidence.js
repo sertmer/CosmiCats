@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { removeFromEvidence } from '../../actions/';
 import './Evidence.scss';
+import PropTypes from 'prop-types';
+import { EvidenceContainer } from '../EvidenceContainer/EvidenceContainer';
 
 export const Evidence = ({evidence, removeFromEvidence}) => {
   return (
@@ -27,3 +29,8 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(null, mapDispatchToProps)(Evidence);
+
+Evidence.propTypes = {
+  evidence: PropTypes.object,
+  removeFromEvidence: PropTypes.func
+}
