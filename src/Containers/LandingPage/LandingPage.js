@@ -46,10 +46,10 @@ export class LandingPage extends Component {
 
   render() {
     return (
-      <section>
-        <h2>The Truth has Nine Lives</h2>
+      <section className='landing-page'>
+        <h2 className='tagline'>The Truth has Nine Lives</h2>
         <Link to={'/login'}>
-          <button type='button' className='Login-button'>Join Us</button>
+          <button type='button' className='login-button'>Join Us</button>
         </Link>
       </section>
     )

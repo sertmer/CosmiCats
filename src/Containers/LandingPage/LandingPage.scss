@@ -1,0 +1,41 @@
+@import '../../_scss/mixins';
+@import '../../_scss/variables';
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  // justify-content: space-around;
+  margin-top: 10%;
+}
+
+.tagline {
+  font-size: 5em;
+  color: $alien-green;
+}
+
+.login-button {
+  width: 10em;
+  // height: 8em;
+  @include rounded-corners(5px);
+  background: linear-gradient(
+    0deg, 
+    rgba(193,193,193,1) 0%, 
+    rgba(245,245,245,1) 100%
+  );
+  padding: 3%;
+  @include rounded-corners(5px);
+  font-size: 2em;
+  font-family: $main-font;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.login-button:hover {
+  transform: scale(1.1);
+}
