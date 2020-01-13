@@ -3,19 +3,24 @@
 
 .mission-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
+}
+
+.belief-header {
+  font-size: 2em;
 }
 
 .card {
   @include rounded-corners(5px);
   padding: 1%;
-  width:40vw;
+  width:93.9vw;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 2%;
+  margin: 1%;
   background: rgb(193,193,193);
   background: linear-gradient(
     0deg, 
@@ -24,12 +29,74 @@
   );
 }
 
-.user-name {
-  width: 85%;
+.user-name-input {
+  width: 60%;
+  height: 10%;
+  font-family: $main-font;
+  font-size: 2em;
+  padding: 1%;
+  @include rounded-corners(5px);
+  margin: 1%;
 }
 
-.agree-radio {
-  width: 50%;
-  height: 50px;
+form {
+  height: 30vh;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-p {
+  font-size: larger;
+}
+
+.radio-div {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  justify-content: center;
+}
+
+.agree-label {
   font-family: $main-font;
+  font-size: larger;
+  font-weight: bold;
+  color: $alien-green;
+}
+
+.binding-contract {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.complete-p {
+  font-weight: bold;
+  color: $alien-green;
+}
+
+.start-btn {
+  width: 10em;
+  @include rounded-corners(5px);
+  background: rgb(69,198,141);
+  background: linear-gradient(
+    0deg, rgba(69,198,141,1) 0%, 
+    rgba(73,210,149,1) 35%, 
+    rgba(85,246,175,1) 100%
+  );
+  padding: 3%;
+  @include rounded-corners(5px);
+  font-size: 1em;
+  font-family: $main-font;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  margin: 5%;
+}
+
+.start-btn:hover {
+  transform: scale(1.1);
 }

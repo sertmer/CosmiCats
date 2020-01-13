@@ -4,7 +4,7 @@
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .icon {
@@ -14,8 +14,8 @@ header {
 .cccr-header {
   color: white;
   font-family: $accent-font;
-  margin: 0 5% 0 0;
-  width: 90%;
+  margin: 0% 5% 0 0;
+  // width: 70%;
 }
 
 .triple-equals {
@@ -31,13 +31,48 @@ header {
   margin-right: 1%;
 }
 
-.user-name {
+.user-name-div {
   display: flex;
   flex-direction: row;
-  width: 100px;
   justify-content: space-between;
+  width: 22%;
 }
 
 .header-h2 {
   margin: 0;
+  height: 2%;
+  margin: 1%;
+  color: $alien-green;
+}
+
+.signout-btn {
+  margin-top: 10px;
+  font-family: $main-font;
+  width: 115%;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.evidence-btn {
+  margin-top: 10px;
+  font-family: $main-font;
+  width: 115%;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.signout-btn:hover {
+  transform: scale(1.1);
+}
+
+.evidence-btn:hover {
+  transform: scale(1.1);
 }

@@ -22,12 +22,32 @@
 }
 
 .research-details {
-  padding: 2%;
+  padding: 1%;
+  width: 18%;
+  text-align: center;
+  margin-left: 2%;
+  margin-top: 10%;
 }
 
 .save-to-faves-btn {
-  height: 10%;
-  width: 90%;
+  background: rgb(69,198,141);
+  background: linear-gradient(
+    0deg, rgba(69,198,141,1) 0%, 
+    rgba(73,210,149,1) 35%, 
+    rgba(85,246,175,1) 100%
+  );
   @include rounded-corners(5px);
   margin: 2%;
+  font-size: 1.5em;
+  font-family: $main-font;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.save-to-faves-btn:hover {
+  transform: scale(1.1);
 }

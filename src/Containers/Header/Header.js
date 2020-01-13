@@ -11,7 +11,7 @@ export const Header = ({ user, setUser, evidence }) => {
     <header>
       <h1 className='cccr-header'>The Center for CosmiCat Research</h1>
       {user &&
-        <div className='user-name'>
+        <div className='user-name-div'>
           <h2 className='header-h2'>Welcome Dr. {user}</h2>
           <Link to='/'>
             <button className='signout-btn' onClick={() => setUser('')}>Sign Out</button>
