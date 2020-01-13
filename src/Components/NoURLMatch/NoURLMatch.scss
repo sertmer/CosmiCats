@@ -31,6 +31,10 @@
   transition-property: transform;
 }
 
+.no-match-btn:hover {
+  transform: scale(1.1);
+}
+
 .no-match-h2 {
   color: $alien-green;
 }
