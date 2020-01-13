@@ -1,27 +1,17 @@
 @import '../../_scss/variables';
 @import '../../_scss/mixins';
 
-.evidence-container {
+.no-match-div {
   display: flex;
-  flex-flow: row wrap;
-  width: 100vw;
-  overflow: auto;
-  justify-content: center;
-}
-
-.evidence-h2 {
-  color: $alien-green;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
   font-size: xx-large;
 }
 
-.no-evidence-div {
-  width: 100%;
-  text-align: center;
-}
-
-.no-evidence-btn {
+.no-match-btn {
   text-decoration: none;
-  width: 40%;
+  width: 20%;
   @include rounded-corners(5px);
   background: rgb(69,198,141);
   background: linear-gradient(
@@ -41,6 +31,10 @@
   transition-property: transform;
 }
 
-.no-evidence-btn:hover {
+.no-match-btn:hover {
   transform: scale(1.1);
+}
+
+.no-match-h2 {
+  color: $alien-green;
 }

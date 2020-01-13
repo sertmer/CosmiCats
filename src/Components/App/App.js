@@ -3,33 +3,22 @@ import Header from '../../Containers/Header/Header';
 import LandingPage from '../../Containers/LandingPage/LandingPage';
 import Login from '../../Containers/Login/Login';
 import ResearchContainer from '../../Containers/ResearchContainer/ResearchContainer';
-import EvidenceContainer from '../../Containers/EvidenceContainer/EvidenceContainer'
+import EvidenceContainer from '../../Containers/EvidenceContainer/EvidenceContainer';
+import NoURLMAtch from '../NoURLMatch/NoURLMatch'
 import './App.scss';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 export const App = () => {
   return (
     <main>
-      <Route path='/' render={ () => 
-          <Header />
-        }
-      />
-      <Route exact path='/' render={() =>
-          <LandingPage />
-        }
-      />
-      <Route path='/login' render={() =>
-          <Login />
-        }
-      />
-      <Route exact path='/research' render={() => 
-          <ResearchContainer />
-        }
-      />
-      <Route exact path='/evidence' render={() => 
-        <EvidenceContainer />
-        }
-      />
+      <Route path='/' component={Header}/>
+      <Switch>
+        <Route exact path='/' component={LandingPage}/>
+        <Route path='/login' component={Login}/>
+        <Route exact path='/research' component={ResearchContainer} />
+        <Route exact path='/evidence' component={EvidenceContainer}/>
+        <Route component={NoURLMAtch} />
+      </Switch>
     </main>
   );
 }

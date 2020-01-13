@@ -3,6 +3,7 @@ import './Login.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setUser } from '../../actions';
+import PropTypes from 'prop-types';
 
 export class Login extends Component {
   constructor(props) {
@@ -76,3 +77,7 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(null, mapDispatchToProps)(Login);
+
+Login.propTypes = {
+  setUser: PropTypes.func
+}

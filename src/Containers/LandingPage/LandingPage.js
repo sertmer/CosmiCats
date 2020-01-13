@@ -4,6 +4,7 @@ import { setNasaImages, setCatImages } from '../../actions/';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './LandingPage.scss';
+import PropTypes from 'prop-types';
 
 export class LandingPage extends Component {
   
@@ -62,3 +63,8 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(null, mapDispatchToProps)(LandingPage);
+
+LandingPage.propTypes = {
+  setNasaImages: PropTypes.func,
+  setCatImages: PropTypes.func
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setUser } from '../../actions';
+import PropTypes from 'prop-types';
 import './Header.scss';
 import alien from '../../images/alien.svg';
 import cat from '../../images/cat.svg';
@@ -9,7 +10,7 @@ import cat from '../../images/cat.svg';
 export const Header = ({ user, setUser, evidence }) => {
   return (
     <header>
-      <Link to='/research' >
+      <Link to='/' >
         <h1 className='cccr-header'>The Center for CosmiCat Research</h1>
       </Link>
       {user &&
@@ -43,3 +44,9 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
+
+Header.propTypes = {
+  user: PropTypes.string,
+  setUser: PropTypes.func,
+  evidence: PropTypes.array
+}
