@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setUser } from '../../actions';
+import PropTypes from 'prop-types';
 import './Header.scss';
 import alien from '../../images/alien.svg';
 import cat from '../../images/cat.svg';
@@ -43,3 +44,9 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
+
+Header.propTypes = {
+  user: PropTypes.string,
+  setUser: PropTypes.func,
+  evidence: PropTypes.array
+}
