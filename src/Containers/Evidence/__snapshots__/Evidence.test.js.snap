@@ -5,6 +5,7 @@ exports[`Evidence Evidence unit tests should match the snapshot 1`] = `
   className="evidence-card"
 >
   <img
+    alt="evidence that cats are aliens"
     className="evidence-img"
     src="someURL.com"
   />

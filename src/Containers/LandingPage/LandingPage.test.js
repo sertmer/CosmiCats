@@ -69,7 +69,7 @@ describe('LandingPage', () => {
   })
   
   describe('Unit Tests', () => {
-    it('should retrieve nasa images after mounting', async () => {
+    it('should retrieve nasa images after mounting', () => {
       wrapper.instance().createCatsArray = jest.fn()
       expect(getNasaImages).toHaveBeenCalled()
     })
