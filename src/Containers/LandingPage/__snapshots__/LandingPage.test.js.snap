@@ -1,15 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LandingPage Unit Tests should match the snapshot 1`] = `
-<section>
-  <h2>
+<section
+  className="landing-page"
+>
+  <h2
+    className="tagline"
+  >
     The Truth has Nine Lives
   </h2>
   <Link
     to="/login"
   >
     <button
-      className="Login-button"
+      className="login-button"
       type="button"
     >
       Join Us

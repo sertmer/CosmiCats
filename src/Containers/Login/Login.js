@@ -32,7 +32,7 @@ export class Login extends Component {
             <h2 className='belief-header'>Facts</h2>
             <p className='login-p'>cats were once worshipped as gifts from the gods</p>
             <p className='login-p'>science cannot explain the purr of a cat</p>
-            <p className='login-p'>cats are can see the unseeable</p>
+            <p className='login-p'>cats can see the unseeable</p>
             <p className='login-p'>cats always land on their feet, due to their innate anti-gravity properties</p>
             <p className='login-p'>if you hold a cats ears back, they look like aliens, dawg</p>
           </div>

@@ -7,29 +7,71 @@ exports[`Login Unit Tests should match the snapshot 1`] = `
   <article
     className="belief-card card"
   >
-    <h2>
-      Our Belief
+    <div
+      className="facts"
+    >
+      <h2
+        className="belief-header"
+      >
+        Facts
+      </h2>
+      <p
+        className="login-p"
+      >
+        cats were once worshipped as gifts from the gods
+      </p>
+      <p
+        className="login-p"
+      >
+        science cannot explain the purr of a cat
+      </p>
+      <p
+        className="login-p"
+      >
+        cats can see the unseeable
+      </p>
+      <p
+        className="login-p"
+      >
+        cats always land on their feet, due to their innate anti-gravity properties
+      </p>
+      <p
+        className="login-p"
+      >
+        if you hold a cats ears back, they look like aliens, dawg
+      </p>
+    </div>
+    <h2
+      className="belief-header"
+    >
+      Terms of Use
     </h2>
-    <p>
-      Cats are Aliens
+    <p
+      className="login-p"
+    >
+      due to the sensitive nature and the secretive acquisition of the information you are about to research, you must agree to utmost secrecy.
     </p>
   </article>
   <form
-    className="binding-contract card"
+    className="binding-contract"
   >
     <label
+      hidden={true}
       htmlFor="name"
     >
       Name: 
     </label>
     <input
-      className="user-name"
+      className="user-name-input"
       name="name"
       onChange={[Function]}
+      placeholder="Your Name"
       type="text"
       value=""
     />
-    <div>
+    <div
+      className="radio-div"
+    >
       <input
         className="agree-radio"
         name="hasAgreed"
@@ -37,12 +79,15 @@ exports[`Login Unit Tests should match the snapshot 1`] = `
         type="radio"
       />
       <label
+        className="agree-label"
         htmlFor="hasAgreed"
       >
         I Agree
       </label>
     </div>
-    <p>
+    <p
+      className="complete-p"
+    >
       Complete the form to proceed
     </p>
   </form>
@@ -56,29 +101,71 @@ exports[`Login Unit Tests should match the snapshot when the is state is complet
   <article
     className="belief-card card"
   >
-    <h2>
-      Our Belief
+    <div
+      className="facts"
+    >
+      <h2
+        className="belief-header"
+      >
+        Facts
+      </h2>
+      <p
+        className="login-p"
+      >
+        cats were once worshipped as gifts from the gods
+      </p>
+      <p
+        className="login-p"
+      >
+        science cannot explain the purr of a cat
+      </p>
+      <p
+        className="login-p"
+      >
+        cats can see the unseeable
+      </p>
+      <p
+        className="login-p"
+      >
+        cats always land on their feet, due to their innate anti-gravity properties
+      </p>
+      <p
+        className="login-p"
+      >
+        if you hold a cats ears back, they look like aliens, dawg
+      </p>
+    </div>
+    <h2
+      className="belief-header"
+    >
+      Terms of Use
     </h2>
-    <p>
-      Cats are Aliens
+    <p
+      className="login-p"
+    >
+      due to the sensitive nature and the secretive acquisition of the information you are about to research, you must agree to utmost secrecy.
     </p>
   </article>
   <form
-    className="binding-contract card"
+    className="binding-contract"
   >
     <label
+      hidden={true}
       htmlFor="name"
     >
       Name: 
     </label>
     <input
-      className="user-name"
+      className="user-name-input"
       name="name"
       onChange={[Function]}
+      placeholder="Your Name"
       type="text"
       value="Davey Havok"
     />
-    <div>
+    <div
+      className="radio-div"
+    >
       <input
         className="agree-radio"
         name="hasAgreed"
@@ -86,6 +173,7 @@ exports[`Login Unit Tests should match the snapshot when the is state is complet
         type="radio"
       />
       <label
+        className="agree-label"
         htmlFor="hasAgreed"
       >
         I Agree
@@ -95,6 +183,7 @@ exports[`Login Unit Tests should match the snapshot when the is state is complet
       to="/research"
     >
       <button
+        className="start-btn"
         onClick={[Function]}
         type="button"
       >

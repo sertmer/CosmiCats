@@ -24,6 +24,7 @@ exports[`Evidence Evidence unit tests should match the snapshot 1`] = `
       12-12-12
     </p>
     <button
+      className="delete-evidence-btn"
       onClick={[Function]}
       type="button"
     >

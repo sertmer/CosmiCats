@@ -46,7 +46,7 @@ describe('Login', () => {
 
       it('should be invoked on change', () => {
         wrapper.instance().handleChange = jest.fn()
-        wrapper.find('.user-name').simulate('change', mockNameEvent)
+        wrapper.find('.user-name-input').simulate('change', mockNameEvent)
 
         expect(wrapper.instance().handleChange).toHaveBeenCalledWith(mockNameEvent)
       })

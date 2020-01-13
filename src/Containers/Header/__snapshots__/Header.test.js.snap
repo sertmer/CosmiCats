@@ -2,11 +2,15 @@
 
 exports[`Header Header unit tests should match the snapshot 1`] = `
 <header>
-  <h1
-    className="cccr-header"
+  <Link
+    to="/research"
   >
-    The Center for CosmiCat Research
-  </h1>
+    <h1
+      className="cccr-header"
+    >
+      The Center for CosmiCat Research
+    </h1>
+  </Link>
   <Link
     to="/evidence"
   >
@@ -36,13 +40,17 @@ exports[`Header Header unit tests should match the snapshot 1`] = `
 
 exports[`Header Header unit tests should match the snapshot when there is a user in props 1`] = `
 <header>
-  <h1
-    className="cccr-header"
+  <Link
+    to="/research"
   >
-    The Center for CosmiCat Research
-  </h1>
+    <h1
+      className="cccr-header"
+    >
+      The Center for CosmiCat Research
+    </h1>
+  </Link>
   <div
-    className="user-name"
+    className="user-name-div"
   >
     <h2
       className="header-h2"

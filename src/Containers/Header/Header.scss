@@ -11,17 +11,25 @@ header {
   height: 5vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 .cccr-header {
   color: white;
   font-family: $accent-font;
   margin: 0% 5% 0 0;
-  // width: 70%;
+  width: 100%;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
 }
 
-.triple-equals {
-  font-size: x-large;
-  font-family: $accent-font;
-  color: white;
+.cccr-header:hover {
+  transform: scale(1.1);
 }
 
 .icon-div {
@@ -35,7 +43,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 22%;
+  width: 30%;
 }
 
 .header-h2 {
